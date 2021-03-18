@@ -66,6 +66,19 @@ void Posjetitelj(){
 	Izbornik1();
 	}
 }
+void skica(){
+	cout<<" ________________________________________________";
+	cout<<"|              |            |       |            |";
+	cout<<"|    A4   |    |     A3     |       |    A2      |";
+	cout<<"|_________|    |____  ______|       |_________   |";
+	cout<<"|         |                          ____________|";
+	cout<<"|    A5   |                         |            |";
+	cout<<"|   ______|                               A1     |";
+	cout<<"|_____________                      |____________|";
+	cout<<"|             |                                  |";
+	cout<<"|     A6      |                                  |";
+	cout<<"|____________________ ulaz ______________________|";
+}
 int main(){
   cout<<"Dobrodosli u Bolnicu Flers!"<<endl;
   cout<<"Cilj nam je omogućiti pacijentima i djelatnicima da se osjecaju ugodno i da imaju povjerenja u nase usluge."<<endl;
