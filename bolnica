@@ -1,2 +1,85 @@
-#include<iostream>
-#include<string>
+#include<bits/stdc++.h>
+#include<ctime>
+using namespace std;
+
+class Doktor{
+private:
+string ime;
+string prezime;
+string odjel;
+int broj;
+string id;
+string lozinka;
+string grad;
+int godine, staz;
+public:
+Doktor();
+void Prijava();
+};
+
+class Pacijent{
+private:
+string id;
+string iddoktor;
+string ime;
+string prezime;
+string odjel;
+string bolest;
+string simptomi;
+string soba;
+struct Datum{
+int dan,mjesec,godina;
+} dolazak, odlazak, godiste;
+public:
+Pacijent();
+
+};
+
+void Doktor::Prijava(){
+  //Dodati usporebu s postojecim lozinkama 
+  cout<<"Unesi korisnicko ime lijecnika";
+    cin>>id;
+  cout<<endl<<"Unesi lozinku";
+  cin>>lozinka;}
+
+void Izbornik1(){
+	cout<<endl<<"Posto posjete nisu dozvoljene u ovo vrijeme, mozete dobiti uvid u stanje pacijenta upisom njegove sifre.";
+	int uid;
+	cin>>uid;
+}
+void Posjetitelj(){
+  cout<<"Trenutno vrijeme je: ";
+  time_t t = time(0);
+   struct tm * now = localtime( & t );
+    
+    cout<<now->tm_hour;
+    cout<<":";
+    cout<<now->tm_min;
+    cout<<":";
+    cout<<now->tm_sec;
+    cout<<endl;
+    /*cout<<"Datum: ";
+    cout<<now->tm_wday;*/
+    if(now->tm_hour>=12 and now->tm_hour<=17){
+    	cout<<"Dosli ste u vrijeme posjeta";
+	}else{cout<<"Trenutno nije moguce posjetiti pacijente. Posjete su od 13-17h.";
+	Izbornik1();
+	}
+}
+int main(){
+  cout<<"Dobrodosli u Bolnicu Flers!"<<endl;
+  cout<<"Cilj nam je omogućiti pacijentima i djelatnicima da se osjecaju ugodno i da imaju povjerenja u nase usluge."<<endl;
+  cout<<"Ako ste posjetitelj i zelite posjetiti nekog bliznjeg ili dobiti uvid u stanje pacijenta pritisnite broj 1."<<endl;
+  cout<<"Ukoliko ste lijecnik i zelite se prijaviti u sustav ili unijeti neke nove informacije o vasim pacijentima, pritisnite broj 2."<<endl;
+  int aa;
+  cin>>aa;
+  if(aa==1){Posjetitelj();}
+  
+  
+  
+  
+  
+  
+  
+  
+  return 0;}
